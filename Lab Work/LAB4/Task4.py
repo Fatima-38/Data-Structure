@@ -74,3 +74,10 @@ class PostfixEvaluator:
             raise ValueError("Malformed expression: leftover values")
         return self._stack.pop()  # final result
         
+
+# --- Quick tests for Task-4 ---
+ev = PostfixEvaluator()
+assert ev.evaluate("432+*") == 20.0        # (4*(3+2)) = 20
+assert ev.evaluate("23+5*") == 25.0        # (2+3)*5 = 25
+assert ev.evaluate("82/3-") == 1.0         # (8/2)-3 = 1
+print("Task-4: PostfixEvaluator OK")

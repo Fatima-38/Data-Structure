@@ -71,6 +71,8 @@ class BracketChecker:
                     return False
             # ignore other characters
         return self._stack.is_empty()  # balanced only if nothing left
+
+
 # --- Quick tests for Task-2 ---
 bc = BracketChecker()
 assert bc.is_balanced("{[()]}") is True     # perfectly nested

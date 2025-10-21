@@ -90,6 +90,8 @@ class InfixToPostfix:
             out.append(top)
 
         return "".join(out)  # join tokens to make postfix string
+
+
 # --- Quick tests for Task-3 ---
 conv = InfixToPostfix()
 assert conv.convert("A*B+C") == "AB*C+"

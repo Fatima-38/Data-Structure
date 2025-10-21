@@ -15,6 +15,7 @@ class LinearSearch:
             if x == target:                # match?
                 return i                   # return index of first match
         return -1                          # not found
+     
         
 #--- Quick tests for Task-5 ---
 ls = LinearSearch([10, 30, 20, 50])
