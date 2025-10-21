@@ -1,2 +1,0 @@
-# Data-Structure
-Lab1
