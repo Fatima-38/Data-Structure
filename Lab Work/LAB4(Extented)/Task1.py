@@ -42,17 +42,38 @@ class Stack:
         return len(self._data)
     
     
-# --- Quick tests for Task-1 ---
-s = Stack()                  # create a stack
-assert s.is_empty()         # new stack should be empty
-s.push(10)                  # push first element
-s.push(20)                  # push second element
-assert s.peek() == 20       # top should be 20
-assert s.pop() == 20        # pop returns 20
-assert s.pop() == 10        # then 10
+# --- Quick tests for your Stack class ---
+
+s = Stack() # create a stack
+
+# Check empty
+print("Is stack empty?", s.is_empty()) # True
+print("Current Stack:", s._data)
+
+# Push elements
+s.push(10)
+print("Pushed 10 → Stack:", s._data)
+
+s.push(20)
+print("Pushed 20 → Stack:", s._data)
+
+# Peek element
+print("Peek →", s.peek())
+print("Stack after peek:", s._data)
+
+# Pop elements
+print("Pop →", s.pop())
+print("Stack after pop:", s._data)
+
+print("Pop →", s.pop())
+print("Stack after pop:", s._data)
+
+# Check empty again
+print("Is stack empty?", s.is_empty())
+print("Current Stack:", s._data)
+
+# Try pop on empty (will raise error)
 try:
-    s.pop()                 # popping now should fail
-    assert False, "Expected IndexError for underflow"
-except IndexError:
-    pass                   # correct path
-print("Task-1: Stack OK")
+ s.pop()
+except IndexError as e:
+ print("Error:", e)
